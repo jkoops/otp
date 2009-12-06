@@ -1,0 +1,456 @@
+<html>
+<meta http-equiv="content-type" Content="text/html; charset=utf-8">
+<title>Currently in the 'pu' branch</title>
+<style type="text/css" media="all">
+    body {
+      width: 600px;
+    }
+</style>
+<body>
+<h1>Currently in the 'pu' branch</h1>
+<p>The comment about each topic branch is taken from the latest
+<em>What's cooking in erlang/otp</em> email and may no longer apply if
+the topic branch has been updated.
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/2cff93211c9302b1c30ab14622a91511f0ddd6a8">gl/gen_server-doc</a> (erts, otp, xmerl):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/c1a9537436874b94ab68ad40ba41b6e5a05e2899">Update Handling Other Messages section in gen_server, gen_fsm, gen_events overviews</a></li>
+<li><a href="http://github.com/erlang/otp/commit/0f19985cc82cb70e63243b00d6bbc0e4f1501c84">Support more top-level primary expressions</a></li>
+<li><a href="http://github.com/erlang/otp/commit/29017b460d3ab05da97aa1d3797c8fef7daa9d4a">Set `vsn` field in `#xmlDecl` record</a></li>
+<li><a href="http://github.com/erlang/otp/commit/b265acbfe6912778544992895d9cc90449511df3">Track parents in `#xmlPI` nodes</a></li>
+<li><a href="http://github.com/erlang/otp/commit/745205559f711215c9f67f609ccfa910790bb53a">Fix namespace-conformance constraints</a></li>
+<li><a href="http://github.com/erlang/otp/commit/0db8fad27b21b9bb760120b52da62657666bd4d3">Add back documentation on .erlang processing.</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/c489d992d95c98d023ecbd96b909ddef0aec4d00">ta/erts-doc</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/87d2d2b2208705fac29547a54d9b5976e9fdff5d">erts: Fix doc typos, duplication and readability</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/956a7ceb7c100ee44e46096763fd268e05b47646">ks/hipe-icode-range-fix</a> (hipe, xmerl):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/5fe3efd88627b0b34dc948a32423cac923b49b56">Fix bug in the simplification of inexact comparisons</a></li>
+<li><a href="http://github.com/erlang/otp/commit/235ce1577b4df715bacff78050beb3d97c8519bc">Various cleanups and cosmetic changes</a></li>
+<li><a href="http://github.com/erlang/otp/commit/d8269b6ed50982bc8e7d6b1e9d6423c18c97e261">Track parents when expanding #xmlElement records</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/aec70d0b4f54af4c301901e9b3f1f67d8e248db2">tv/edoc-loop-fix</a> (edoc):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/6ac05e50a77cc8ebcf335fd9d6908efc74e3e201">Fix infinite loop for malformed edoc input</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/b583753abca042043c5f1309e687e198e930c0bf">ja/cocci-useless-cast</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/4163493602b68cd7bafa18f7c3f64aa7ef61fbbf">Remove useless casts from the emulator</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/7c8445238da223b22b5c104108a3f1af86a9ce8f">uw/mnesia-majority</a> (mnesia):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/f5b842798f19af49b6fdccbe2abc796a6b7c7f2e">Add documentation text about majority checking</a></li>
+<li><a href="http://github.com/erlang/otp/commit/9c2f7657107714ffe9bb0d6bb64be9d284cb067d">add mnesia_majority_test suite</a></li>
+<li><a href="http://github.com/erlang/otp/commit/a535b6c9b689aff21ecf6f193657589c959c52d3">where_to_wlock optimization + change_table_majority/2</a></li>
+<li><a href="http://github.com/erlang/otp/commit/eb81e204d04e35d2a85c7e9941791ac3f6c28e0b">bug in mnesia_tm:needs_majority/2</a></li>
+<li><a href="http://github.com/erlang/otp/commit/5b304d4f8ac69e04d29e7e2a3b1a57eca6140dc5">optimize sticky_lock maj. check</a></li>
+<li><a href="http://github.com/erlang/otp/commit/ae9e1fa7040e903bd0b6d01dd599f5c71eb0777d">check majority for sticky locks</a></li>
+<li><a href="http://github.com/erlang/otp/commit/6f02d2e1783f0e41f8ed8300e2fb332c6db69c3b">Write locks now check majority when needed.</a></li>
+<li><a href="http://github.com/erlang/otp/commit/c3241c0856f83ef8c8b6fd4f00ef2b656308fc03">Add {majority, boolean()} per-table option.</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/3fb033f47ba348e55d3154f43437f4a0be0b5f99">ms/file-fix-hang-reading-compressed-files</a> (erts, kernel):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/292ecd032c52bb8b130c19e0cbdee5025e897a76">file: fix hang reading compressed files</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/c7516637e73eed8527b147b3fc51dd6d5e218d9f">ks/code-spec-fixes</a> (hipe, kernel):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/2697ce88a724423905e264fedd304bb703a50689">Sanitize the specs of the code module</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/9afaad1c8dbed3e2862b0a5f5bc369d4fb1fa81a">pg/hipe-remove-constants-pool</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/0c16b0931feb67641b91d973dbf8f5756384c19a">Remove hipe constants pool</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/5550c2e5332862937aced23dcc1b08f1fb9660e3">pg/fix-hibernate-with-hipe</a> (erts, otp):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/ce00ecb42c136b55d91ece38c9cf29b0d0cc6380">Fix several bugs related to hibernate/3 and HiPE</a></li>
+</ul>
+<p> . Fix several bugs related to hibernate/3 and HiPE (babd761)
+
+<p>
+</li>
+<li><a href="http://github.com/erlang/otp/commit/541677c6eb0544852c4aded8f69346621d2e9f72">ta/efficiencyguide-typos</a> (otp):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/5d625044361df799d50403ab7e9470281256ff64">Fix typos in efficiency guide</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/c53deb37c9ff938c4f066d9407a13fa96acccb67">vb/shell</a> (erts, kernel, stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/f139eab81ea8d1a65261dae55e8e032549ffd13d">Add expandfmt_fun option for io:setopts</a></li>
+<li><a href="http://github.com/erlang/otp/commit/95672fa5be00bb93b042da4f5c3416634798dc47">Correct JCL's help indentation</a></li>
+<li><a href="http://github.com/erlang/otp/commit/ba4b19605ab8675029d28b7f8a42185bb1c2d948">Handle JCL's "r" command error when no pool started</a></li>
+<li><a href="http://github.com/erlang/otp/commit/e2077cb78b26e0fd118840831bb728cc0145feb3">Fix tab expansion in remote shell</a></li>
+<li><a href="http://github.com/erlang/otp/commit/838b84a5ebc93737f7ebfc2dc9aac657409434de">edlin_expand: fix matches formatting</a></li>
+<li><a href="http://github.com/erlang/otp/commit/ff28c52770a5cb862efab890884265724019f506">Take into account arity len when calculating field's width</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/4474d0f8ae5671b8eb29ee5c279bf9a71fca7d4e">hw/erl-clarify-detached-doc</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/98e954dfaf707895f1558d51a1ea9fd22812e161">Mention that "-detached" implies "-noinput"</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/9eb2b933f041d395233fe523d651e166f01c66f4">ms/ei-buffer-overflow-when-decoding-atoms</a> (erl_interface):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/caba1ef2651fac00ba6de5980111283cee106730">ei: buffer overflow when decoding atoms</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/0047b8a8589959463cd15b0756335e141ec95b7b">ms/ei-fix-buffer-overflows</a> (erl_interface):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/ce7fa3600a96a9c813e24ab56bc9a702c33e5c10">erl_interface: fix buffer overflows</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/b5022345ca74630183e1ae07aebbd8467fa86403">ta/binary-part-typo</a> (stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/98f51f25c9f1da7865997c8f5dbca9e13f0959e2">Fix typo in binary:part/2 example</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/3ced44b0fd2e1085dc3558a8473845af6fef6550">ks/dialyzer-fullpath</a> (dialyzer):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/b4c3711c6daa2f171f56b984235969e223ce8f9c">Add a --fullpath option to Dialyzer</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/41605be4fb94162330468b05be212ab6fa995f7e">fd/supervisor-delete-child-spec-on-child-termination</a> (stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/bdf27ab54867caca606e533cfe147e0f3c4675f8">Added supervisor:start_child/3</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/a3f8974e00f55d3cbbf2d93a2a2169454120a4f0">sa/float_to_list_2</a> (erts, stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/3beeabd32b2639da5af94e0704e9e26d88e55e02">new float_to_list/2</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/bca5f69e049113364b4a2f5db9dd4ed3ce550c87">sa/dialyzer-fix-guards</a> (dialyzer):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/271ee9372e07feafae6af35ccc783946371d50bd">Fix warnings about guards containing not</a></li>
+<li><a href="http://github.com/erlang/otp/commit/02e0f98ab537b002f2ccb1092d9e7310d9e15c58">Fix errors in the handling of 'and'/'or' guards</a></li>
+<li><a href="http://github.com/erlang/otp/commit/326ec4e6a86e7ddb7b49f2465ad43adf86399aac">Cosmetic changes</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/954dc756dd685dd78f497601c0c7c2c15d8098b2">ks/reltool-spec-fixes</a> (reltool):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/96c81d6131d82f96e98223aac052783697a1ca1a">Fix two erroneous specs of reltool.erl</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/4638737c04583298f23c6e995ba8f676fd81168e">ta/epmd-typo</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/ce956a8f176129c2ce7327f3b7ad7cc71150ce34">Fix typo in epmd help</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/461083263246208fe2af1a24601f657a8b1ba422">ta/httpc-typo</a> (inets):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/e331e0d25563a215eef455ac4c5af4e9e9f6c9f8">Fix typo in httpc documentation</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/84946cdd26f5e9c20c0062ca34686a5fbfb5e786">fm/posix-fallocate</a> (erts, kernel):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/38a922d210b0d7e0d3caee60f38d4488f7e707cb">Fix build on Solaris</a></li>
+<li><a href="http://github.com/erlang/otp/commit/9870d9b91c3b751296eeefa68a5deda6bb53f4e3">Added file:allocate/2</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/14b0b4cc22222ddaa618dc1c73b3c88be6814b54">ta/driver-entry-typos</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/08edf9727b43a1674e1d5f5544e8ca3283b53b81">Fix a couple typos in driver_entry(3)</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/b326aaf522daf3d8e59d6b98cf78b87dba6daed5">nox/xmerl-namespace-axis</a> (xmerl):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/27d791fdf92d1552246a9c21931422ca18d6426d">Implement namespace axis</a></li>
+<li><a href="http://github.com/erlang/otp/commit/75e67f5abd2b417bb6bcd889ce273ebc9c950be2">Add `#xmlPI` support to xmerl_xpath:write_node/1</a></li>
+<li><a href="http://github.com/erlang/otp/commit/f05e78b8cf71ea45d8ed0b25752c2606731e5caa">Fix processing-instruction(name?)</a></li>
+<li><a href="http://github.com/erlang/otp/commit/610df56912926c65747d7ea4aeacd712bb47e4ca">Fix path filters</a></li>
+<li><a href="http://github.com/erlang/otp/commit/770d6d9aaf4ebad18b1247911c5c3c23d688364a">Support more top-level primary expressions</a></li>
+<li><a href="http://github.com/erlang/otp/commit/e5b6b3a6d7b0551a1fddda88e9f838e3496f2294">Accumulate comments in element nodes</a></li>
+<li><a href="http://github.com/erlang/otp/commit/18584c532052e7a653d1dd23ee8e166ab6cf8059">Add `default_attrs` option</a></li>
+<li><a href="http://github.com/erlang/otp/commit/aef3dea21b2d4d44e7d42506957bc362c9b5342f">Allow whole documents to be returned</a></li>
+<li><a href="http://github.com/erlang/otp/commit/dc9b220d4bd81512d141bb5c471dd5b5496d0c2c">Track parents and namespace in `#xmlAttribute` nodes</a></li>
+<li><a href="http://github.com/erlang/otp/commit/5095331dd7593e088c431005b445e54d3be13282">Track parents in `#xmlPI` nodes</a></li>
+<li><a href="http://github.com/erlang/otp/commit/d712331abecba3185306e9b6c5310be2967740ef">Set `vsn` field in `#xmlDecl` record</a></li>
+<li><a href="http://github.com/erlang/otp/commit/e062270753011819d1bfeef2ede87cffa1080f65">Fix namespace-conformance constraints</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/c3db42d19ea267226ba5f9b4879d233c5cc86d52">gl/erts-doterlang-docs</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/a80ace93f60921917153afe630a59fc00db26a45">Add back documentation on .erlang processing.</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/e7fcc7ee0256b0f2ff4958e7cc6855b2a1495ccd">fd/httpc-man-page-fixes</a> (inets):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/778a60894820bbecd2f3b62619e4c284c9e53ca9">Grammar and typo fixes for the httpc module documentation</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/c7689f6afbf10d75d8f27b55291ea8be890e911b">cr/httpc-docs</a> (inets, kernel):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/e6180a62e9cf2417f28a32704151667350605e8a">inets/httpc: Polish documentation</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/e98169f87ee90a8765a2a40a3bd28e97a33d0798">fd/unix-efile-readdir-fix</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/78cfdaf1282e64da61b7aa365d96841155ec63e9">Fix call to strncat, 3rd arg should be of type size_t and not a pointer</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/694b7d58910b2f79f7c6a55d73e5477fab9f1e0f">mk/net-kernel-epmd-return-list</a> (kernel):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/169d7e440437c8b329cef82c4a260a990956caa7">Fix list returned by net_kernel:epmd_module</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/ae8ad7d626c445963511169eaed38536761f65aa">ih/calendar-iso-8601-erl</a> (stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/d82b0eb77cd9ac569a09be7d363f262c877c8071">Add ISO week number calculation functions to the calendar module in stdlib</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/ed10bcc5281b69ab4dc3be694aab4a1ab4dc540d">ta/erlsrv-typos</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/31b82e8d38ae0960f150314bacf016ce1801b73c">Fix two typos in erlsrv log messages</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/0c9465d6c1af7e35085f1f8fe84dffee13509139">fm/dict-man-page</a> (stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/18777e8f34979c4bc66ccd6930ed095a7a88891a">Fixes to the orddict module documentation</a></li>
+<li><a href="http://github.com/erlang/otp/commit/c5377779548f706c7c82be38fdd9b16551100c38">Fixes to the dict module documentation</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/c89e9a5e7464c37436b3fc41745dd4d2fc234d1e">ta/ssh-ensure-userdir</a> (ssh):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/267b3a0788c7392bc25b322f9d5086dd16926c5a">ssh: ensure ~/.ssh exists</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/0ae1a7b0267ffca1510df041387d26c2aec98f29">bsmr/fix-makefile-in-for-xref-mod-app-escript</a> (otp):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/10d4235c7ab92f898d7411d3717f1d03db8c46c3">Fix for Makefile.in invoking xref_mod_app.escript</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/fa2c276bdff4c0d5a7acebda185b9e23c0c26a0a">dk/agent-capabilities</a> (snmp):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/17c3b19e9b6bdfa6d4dc672cbe03b8080108e4b8">AGENT-CAPABILITIES handling added to SNMP mib compiler</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/acc9da79a9bd03df12202f89fe78cc61eef05a95">ms/epmd-local-access-check</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/5b68030b9d57a839ad798415f30936660ca83904">epmd: include host address in local access check</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/d8e98c7e0013d7f606c3a6d8d260b2f41cae4c94">ks/asn1-dialyzer-fixes</a> (asn1):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/508a6d2a69e5d3395816fa353d813adb61aa835f">Shut off some dialyzer warnings</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/335a33487b5a5422abc4a385a6c3972f2da91d38">hw/fix-epmd-perror</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/b363d7d34a0d5b61131a7edaec2180c6b5103544">Fix epmd's dbg_perror() output</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/767624bea8be633c9dc8bf6304c2d42cf4a19625">hw/epmd-bind-to-address</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/bcf3b3d0d589666575d9b044d0779be2e40e1762">Allow user to specify the IP address epmd binds to</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/e4c32e768cd0e246d8984359f060141f747502b3">hw/call-chmod-without-f</a> (asn1, common_test, compiler, cosFileTransfer, crypto, debugger, docbuilder, edoc, erl_interface, erts, et, inets, inviso, kernel, megaco, mnesia, orber, parsetools, percept, public_key, reltool, runtime_tools, snmp, ssl, stdlib, syntax_tools, test_server, tools):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/7ed11a886fc8fcaf3c2b8324294e2f24e02b0f28">Call chmod without the "-f" flag</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/80a14c3014150ea78d78e0a1789e44a344127485">pg/des-cfb-functions</a> (crypto):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/2c79ae7ebda401d961d2cc006aec0a9dec06e48c">Add DES and Triple DES cipher feedback (CFB) mode functions</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/33da2e6f17754a51a0f083c8501fd757cc8d12e3">bw/efile_exists</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/72039323b2edca78a5259347f223da795a351e9c">prim_file:exists/{1,2} which is lightweight file existence check</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/9d8adbd3918e1b2f3688b89e987fed43d00679fc">bw/tv-render-fix</a> (tv):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/5eff630532b9421a0481b3f727cc3bd58b4ad642">tv: Allow table viewer to display refs, ports and small binaries</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/a4e1ac3a4263c7f4af161f3e1651e7dfad664fd4">cg/fix-prng</a> (stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/863ec4dbab9913edae7238712c6942e1a8366c1b">Fix a bug in the implementation of the pseudo-random number generator</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/9e06b3c574bc9b62de189b81d9931c33f0684473">fm/httpc-upload-body-streaming</a> (inets):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/6ec259d2828ac44ee71c7b32392497ba1712ed48">httpc: added support for streaming the body of an upload request (PUT or POST). Examples:</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/5c658424f9d2d16bc0e14c9b94f9322b79c3ff60">ts/cover-with-export_all</a> (tools):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/eb02beb1c33fafb32e0596d947310d8c17e8bbf2">add user specified compiler options on form reloading</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/046f6fc3ad82d0e2fa1cb3ea0c7b3405e4aa1f2f">sg/fix-diskless-booted-relup</a> (sasl):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/54cb5dfd5ac9821c49b5b7c3f89c8c9c1d32d062">Remove traces of release_handler reading from filesystem when it has Masters list</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/f51fe9a01bef58c4f8a38330aa173a007b3907fb">ta/sendfile</a> (erts, kernel):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/b68ee2bbaaf5c35d625c7c70673702e2c06c60e5">Implement file:sendfile</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/3a3a8ae3f92ad9c089118c9d8f060aa95d31f740">ta/ensure-dot-ssh-exists</a> (ssh):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/2c14d901c4e2b56e39ea4a847f850f1e9c247895">ssh: ensure ~/.ssh exists</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/89e675b09fdf6f3a1fc50c4a4e79719d21f6746b">km/pool_connect-to-running-nodes</a> (stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/a9f4cbcbc02b38f00bde3fa9ac7456702ac7675e">Change pool module to attempt to attach to nodes that are already running</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/24ae8116550c277425a7eb353f0b632d27be305a">sa/callback-attr</a> (compiler, inets, kernel, otp, stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/85ae9d7d623a3a03ac04f102e45ae528c90ebd25">Add callback specs into 'application' module in kernel</a></li>
+<li><a href="http://github.com/erlang/otp/commit/019e6d1b8658de7c1e514081de4a1b2346a0536f">Add callback specs to tftp module following internet documentation</a></li>
+<li><a href="http://github.com/erlang/otp/commit/575c7afdac7df3af05e11db99b781d3703f6cfe6">Add callback specs to inets_service module following possibly deprecated comments</a></li>
+<li><a href="http://github.com/erlang/otp/commit/a9da5ccbb968a6bc0b51f5682aab8ae0d6a9249e">Add '-callback' attributes in stdlib's behaviours</a></li>
+<li><a href="http://github.com/erlang/otp/commit/d5d255b59ab6a07f45ac8a3b9a590dcb73a60609">Update primary bootstrap</a></li>
+<li><a href="http://github.com/erlang/otp/commit/1155c860ca60ee42329afe2c1a4647995bd8a4be">Automatically generate 'behaviour_info' function from '-callback' attributes</a></li>
+<li><a href="http://github.com/erlang/otp/commit/1a1cc4b201ab06a279c5be0dcbae1f71d2557052">Add '-callback' attribute to language syntax</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/bff7994678cfbcc2d66d005dcd8a7c7734eaec47">jn/gen_stream</a> (stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/a2423e4d428151d895ba003183421a14eefbde48">Add gen_stream behaviour</a></li>
+</ul>
+<p> . Add new gen_stream behaviour for efficiently consuming serial streams (65f3db8)
+
+<p>This topic branch has a failing test case:
+
+<p>shell_SUITE:start_restricted_from_shell;
+    We have now tested with and without this topic branch and when
+    it is present that test case fails. We consider it proved
+    to be guilty. The test case does not fail when run standalone
+    so it seems to be tricky... Also, some of its own test cases
+    fail sporadicly.
+
+<p>Action expected from: Topic author.
+
+<p>
+</li>
+<li><a href="http://github.com/erlang/otp/commit/6e72cf2ac5cd122a5359893f38142ef55e79ea4d">gc/gen-format-status-improvements</a> (stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/95ed86fc9893460751c5141ff872bdc13814a273">Fix format_status bug for unregistered gen_event processes</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/f1495e95c5a0f67d37310d160e4f711f8fd7a736">pg/honor-start-type-in-rel-files</a> (sasl):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/759990082fe2a6da918ddb9e8cbc14f68acaf242">Honor start type in .rel files when building relup files</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/94327d4d164f99f3b74bb525f712a860dc00bd1e">sb/make-files-like-erlc</a> (tools):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/5e9d05198cd00f74b99f697eb022ae0b2f31f136">Change make:files to behave more like erlc</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/924ca16f96fe300b3bd3fce053ca553e3af6b728">ta/asn1-reporting</a> (asn1):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/93face25db7222e5c0e4950caaa8acbf6d9bc2dc">asn1ct: Make formatting of errors and warnings consistent</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/31f7c051fa90f1b3bc02d3e2a8cfadb4fb2a411b">jf/run_erl-disable-flow-control</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/d0775cd6bc64f5eec41d04e04441fe6a6e058927">Teach run_erl RUN_ERL_DISABLE_FLOWCNTRL for disabling flow control</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/4eb7c16ab799b11d46d04350c2eee956cf41ac8a">bg/temp-hipe-fixes</a> (compiler, hipe, kernel):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/8592a02f6d980c2a2f9ad53b5f0b51ec78407e07">Avoid crash by skipping compilation_SUITE:on_load/1</a></li>
+<li><a href="http://github.com/erlang/otp/commit/e699ad45da92c61d465b92354fd368907599dcaf">Inline less aggressively for native-code compilation</a></li>
+<li><a href="http://github.com/erlang/otp/commit/2b7220209595b9b9c954e44324ac677a6d292196">Crudely fix return type for the lists:key{search,find,member}/3</a></li>
+<li><a href="http://github.com/erlang/otp/commit/2712344aafd583a97e470e13aa559b1fd2c5c3e1">seq_trace_SUITE: Don't native-compile</a></li>
+<li><a href="http://github.com/erlang/otp/commit/e8d0ea478b5733ecc50edadc47fb6c65f30c6df6">Disable native code if on_load is used</a></li>
+<li><a href="http://github.com/erlang/otp/commit/e25ef8cc4aa7bb544f0e1349a6cf66c95b016d79">andor_SUITE: Don't native-compile</a></li>
+</ul>
+<p>This branch contains temporary workarounds to avoid failing test
+cases and is never intended to graduate.
+
+<p>
+</li>
+<li><a href="http://github.com/erlang/otp/commit/e160392a7cb2beae9f64a7ac7a7eab6703d4286b">jp/dependencies_makefile</a> (compiler, erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/4945add21904c53c0db35faaba6e621599d13335">Add dependencies Makefile generation to erlc(1) and compile(3)</a></li>
+</ul>
+<p>Approved in principle by the OTP Technical Board; now awaits a closer
+review of the implementation.
+
+<p>Action expected from: Björn Gustavsson (the reviewer)
+
+<p>
+
+</li>
+</ul>
+</body>
+</html>
