@@ -22,7 +22,7 @@
 
 %% External exports
 -export([start_link/2, start_link/3,
-	 start_child/2, restart_child/2,
+	 start_child/2, start_child/3, restart_child/2,
 	 delete_child/2, terminate_child/2,
 	 which_children/1, count_children/1,
 	 check_childspecs/1]).
@@ -46,6 +46,8 @@
 -type sup_name() :: {'local', atom()} | {'global', atom()}.
 -type sup_ref()  :: atom() | {atom(), atom()} | {'global', atom()} | pid().
 -type child_spec() :: {term(),mfargs(),restart(),shutdown(),worker(),modules()}.
+-type child_options() :: [child_option()].
+-type child_option()  :: 'delete_child_on_exit'.
 
 -type strategy() :: 'one_for_all' | 'one_for_one'
                   | 'rest_for_one' | 'simple_one_for_one'.
@@ -59,7 +61,8 @@
 		restart_type    :: restart(),
 		shutdown        :: shutdown(),
 		child_type      :: worker(),
-		modules = []    :: modules()}).
+		modules = []    :: modules(),
+		options = []    :: child_options()}).
 -type child() :: #child{}.
 
 -define(DICT, dict).
@@ -113,7 +116,12 @@ start_link(SupName, Mod, Args) ->
 
 -spec start_child(sup_ref(), child_spec() | [term()]) -> startchild_ret().
 start_child(Supervisor, ChildSpec) ->
-    call(Supervisor, {start_child, ChildSpec}).
+    start_child(Supervisor, ChildSpec, []).
+
+-spec start_child(sup_ref(), child_spec() | [term()], child_options()) ->
+    startchild_ret().
+start_child(Supervisor, ChildSpec, Options) ->
+    call(Supervisor, {start_child, ChildSpec, Options}).
 
 -type restart_err() :: 'running' | 'not_found' | 'simple_one_for_one' | term().
 -spec restart_child(sup_ref(), term()) ->
@@ -278,7 +286,7 @@ do_start_child_i(M, F, A) ->
 -type call() :: 'which_children' | 'count_children' | {_, _}.	% XXX: refine
 -spec handle_call(call(), term(), state()) -> {'reply', term(), state()}.
 
-handle_call({start_child, EArgs}, _From, State) when ?is_simple(State) ->
+handle_call({start_child, EArgs, _Options}, _From, State) when ?is_simple(State) ->
     #child{mfargs = {M, F, A}} = hd(State#state.children),
     Args = A ++ EArgs,
     case do_start_child_i(M, F, Args) of
@@ -299,10 +307,11 @@ handle_call({start_child, EArgs}, _From, State) when ?is_simple(State) ->
 handle_call({_Req, _Data}, _From, State) when ?is_simple(State) ->
     {reply, {error, simple_one_for_one}, State};
 
-handle_call({start_child, ChildSpec}, _From, State) ->
+handle_call({start_child, ChildSpec, Options}, _From, State) ->
     case check_childspec(ChildSpec) of
 	{ok, Child} ->
-	    {Resp, NState} = handle_start_child(Child, State),
+	    {Resp, NState} = handle_start_child(
+                           Child#child{options = Options}, State),
 	    {reply, Resp, NState};
 	What ->
 	    {reply, {error, What}, State}
@@ -759,9 +768,19 @@ state_del_child(Child, State) ->
     State#state{children = NChildren}.
 
 del_child(Name, [Ch|Chs]) when Ch#child.name =:= Name ->
-    [Ch#child{pid = undefined} | Chs];
+    case lists:member(delete_child_on_exit, Ch#child.options) of
+        false ->
+            [Ch#child{pid = undefined} | Chs];
+        true ->
+            Chs
+    end;
 del_child(Pid, [Ch|Chs]) when Ch#child.pid =:= Pid ->
-    [Ch#child{pid = undefined} | Chs];
+    case lists:member(delete_child_on_exit, Ch#child.options) of
+        false ->
+            [Ch#child{pid = undefined} | Chs];
+        true ->
+            Chs
+    end;
 del_child(Name, [Ch|Chs]) ->
     [Ch|del_child(Name, Chs)];
 del_child(_, []) ->

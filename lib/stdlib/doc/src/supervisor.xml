@@ -250,11 +250,14 @@ child_spec() = {Id,StartFunc,Restart,Shutdown,Type,Modules}
     </func>
     <func>
       <name>start_child(SupRef, ChildSpec) -> Result</name>
+      <name>start_child(SupRef, ChildSpec, ChildOptions) -> Result</name>
       <fsummary>Dynamically add a child process to a supervisor.</fsummary>
       <type>
         <v>SupRef = Name | {Name,Node} | {global,Name} | pid()</v>
         <v>&nbsp;Name = Node = atom()</v>
         <v>ChildSpec = child_spec() | [term()]</v>
+        <v>ChildOptions = [ChildOption]</v>
+        <v>&nbsp;ChildOption = delete_child_on_exit</v>
         <v>Result = {ok,Child} | {ok,Child,Info} | {error,Error}</v>
         <v>&nbsp;Child = pid() | undefined</v>
         <v>&nbsp;Info = term()</v>
@@ -303,6 +306,10 @@ child_spec() = {Id,StartFunc,Restart,Shutdown,Type,Modules}
           discarded and the function returns <c>{error,Error}</c> where
           <c>Error</c> is a term containing information about the error
           and child specification.</p>
+        <p>If the child option <c>delete_child_on_exit</c> is specified and
+          the supervisor's restart strategy is not <c>simple_one_for_one</c>,
+          the child specification is deleted from the supervisor when the
+          child terminates.</p>
       </desc>
     </func>
     <func>
