@@ -112,6 +112,7 @@ medium(suite) ->
      durability,
      recovery,
      consistency,
+     majority,
      {mnesia_frag_test, medium}
     ].
 
@@ -129,6 +130,9 @@ recovery(suite) ->
 
 consistency(suite) ->
      [{mnesia_consistency_test, all}].
+
+majority(suite) ->
+    [{mnesia_majority_test, all}].
    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 heavy(doc) ->
