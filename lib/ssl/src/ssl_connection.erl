@@ -289,9 +289,9 @@ start_link(Role, Host, Port, Socket, Options, User, CbInfo) ->
 %% gen_fsm callbacks
 %%====================================================================
 %%--------------------------------------------------------------------
--spec init(list()) -> {ok, state_name(), #state{}} | {stop, term()}.                   
+-spec init(list()) -> {ok, state_name(), #state{}, timeout()} | {stop, term()}.                   
 %% Possible return values not used now.
-%%			  | {ok, state_name(), #state{}, timeout()} |
+%%			  | {ok, state_name(), #state{}} |
 %%			  ignore  
 %% Description:Whenever a gen_fsm is started using gen_fsm:start/[3,4] or
 %% gen_fsm:start_link/3,4, this function is called by the new process to 
